@@ -15,9 +15,6 @@ const useStyles = makeStyles({
     background: '#cffffe',
     borderBottom: '1px solid #8fc0a9'
   },
-  title: {
-    fontSize: '1.5rem',
-  },
   pos: {
     marginBottom: 10,
     fontSize: '1.2rem',

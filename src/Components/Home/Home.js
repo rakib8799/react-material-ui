@@ -3,8 +3,7 @@ import Posts from '../Posts/Posts';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  
+  Route
 } from "react-router-dom";
 import NotFound from '../NotFound/NotFound';
 import DetailPage from '../DetailPage/DetailPage';

@@ -13,9 +13,7 @@ const useStyles = makeStyles((theme) => ({
     '& > * + *': {
       marginTop: theme.spacing(0),
       fontSize: '1.5rem',
-      // borderRadius: '10px',
-      background: '#1e5f74',
-      
+      background: '#1e5f74',     
     },
   },
   title: {
