@@ -12,10 +12,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: '10ch',
     margin: '0 auto',
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.paper
   },
   inline: {
-    color: '#555',
+    color: '#555'
   },
 }));
 
@@ -23,6 +23,7 @@ const AwaySectionValues = (props) => {
   const { value } = props;
   const { name, email, body } = value;
   const classes = useStyles();
+  
   return (
     <List className={classes.root}>
       <ListItem alignItems="flex-start">
@@ -33,7 +34,10 @@ const AwaySectionValues = (props) => {
           primary={name}
           secondary={
             <React.Fragment>
-              <Typography component={'span'} variant={'body2'} className={classes.inline}>{email}</Typography>
+              <Typography component={'span'} variant={'body2'} 
+              className={classes.inline}>
+                {email}
+              </Typography>
               {body}
             </React.Fragment>
           }

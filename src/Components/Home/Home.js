@@ -5,12 +5,13 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
 import NotFound from '../NotFound/NotFound';
 import DetailPage from '../DetailPage/DetailPage';
 
 const Home = () => {
-  return (
-    
+  
+  return (    
       <Router>
         <Switch>
           <Route exact path='/'>

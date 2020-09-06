@@ -5,7 +5,6 @@ import { CountContext } from '../../App';
 import { makeStyles } from '@material-ui/core/styles';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: '20px auto',
@@ -13,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     '& > * + *': {
       marginTop: theme.spacing(0),
       fontSize: '1.5rem',
-      background: '#1e5f74',     
+      background: '#1e5f74'
     },
   },
   title: {
@@ -27,16 +26,18 @@ const DetailPage = () => {
   const {postId} = useParams();
   const [count,setCount] = useContext(CountContext);
   const classes = useStyles();
+
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
     .then(res => res.json())
     .then(data => setCount(data))
   },[postId, setCount])
+
   return (
     <div className={classes.root}>
       <SnackbarContent className={classes.title} message={count.title} />
       <SnackbarContent message={count.body}/>
-    <Comments></Comments>
+      <Comments></Comments>
     </div>
   );
 };

@@ -4,11 +4,13 @@ import PostBtn from '../PostBtn/PostBtn';
 
 const Posts = () => {
   const [count,setCount] = useContext(CountContext);
+  
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then(res => res.json())
     .then(data => setCount(data))
   },[setCount])
+
   return (
     <div>
       {

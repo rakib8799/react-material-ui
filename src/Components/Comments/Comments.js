@@ -9,13 +9,14 @@ const Comments = () => {
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
     .then(res => res.json())
-    .then(data => setCount(data));
+    .then(data => setCount(data))
   },[postId])
 
   return (
     <div>
       {
-        count.map(cn=><AwaySectionValues key={cn.id} value={cn}></AwaySectionValues>)
+        count.map(cn=>
+        <AwaySectionValues key={cn.id} value={cn}></AwaySectionValues>)
       }      
     </div>
   );
